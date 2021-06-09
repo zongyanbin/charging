@@ -31,6 +31,9 @@ func (this Hero) SetName(newName string)  {
 */
 // end class
 
+// go面向对象封装
+// 1.给一个结构体 *指针绑定
+// 2.首字母大小写
 func (this *Hero) Show()  {
 	fmt.Println("hero=",this)
 	fmt.Println("============分别打印========")
