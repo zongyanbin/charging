@@ -7,7 +7,7 @@ import "fmt"
 
 // 本质是一个指针
 type  AnimaiIF interface {
-	Sleep
+	Sleep()
 	GetColor() string // 获取动物颜色
 	GetType() string // 获取动物的种类
 }
