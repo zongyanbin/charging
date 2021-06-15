@@ -1,4 +1,4 @@
-module github.com/charging/golang/modules_test
+module charging/golang/modules_test
 
 go 1.15
 
