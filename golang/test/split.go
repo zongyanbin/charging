@@ -6,10 +6,11 @@ import "strings"
 // Split("我爱你","爱") => ["我","你"]
 // 1不容易观察 2留存
 func Split(s, sep string)(ret []string){
+	ret = make([]string,0,strings.Count(s,sep)+1) // 1 allocs/op  优化后
 	 idx := strings.Index(s,sep)
 	 for idx > -1{
 	 	ret = append(ret,s[:idx])
-	 	s = s[idx+1:]
+	 	s = s[idx+len(sep):]
 	 	idx = strings.Index(s,sep)
 	 }
 	 ret = append(ret, s)
